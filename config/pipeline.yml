@@ -1,0 +1,26 @@
+# Smart Factory Analytics Pipeline Configuration
+# Zambaiti - 2019-2020
+
+input_path: "hdfs:///data/sensors/raw/"
+output_path: "hdfs:///data/sensors/processed/"
+
+spark:
+  master: "spark://spark-master:7077"
+  executor_memory: "4g"
+  executor_cores: 2
+
+influxdb:
+  host: influxdb.zambaiti.local
+  port: 8086
+  database: factory_analytics
+
+thresholds:
+  temperature_warning: 40.0
+  temperature_critical: 50.0
+  vibration_warning: 3.0
+  vibration_critical: 5.0
+
+schedule:
+  sensor_processing: "*/5 * * * *"
+  hourly_aggregation: "0 * * * *"
+  daily_report: "0 6 * * *"
