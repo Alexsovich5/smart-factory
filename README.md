@@ -1,61 +1,40 @@
 # Smart Factory Analytics Platform
 
-![Project Status](https://img.shields.io/badge/Status-Complete-brightgreen)
-![Timeline](https://img.shields.io/badge/Timeline-April%202019%20--%20May%202020-blue)
-![Technology](https://img.shields.io/badge/Tech-Python%203.7%20%7C%20Spark%20%7C%20TensorFlow%20%7C%20PowerBI-orange)
-
-## Project Overview
-
 Smart factory analytics platform for predictive maintenance, quality analysis, and production optimization using Apache Spark for data processing and TensorFlow for ML models with PowerBI dashboards.
 
-**Role**: IT Administrator
-**Organization**: Zambaiti
-**Duration**: April 2019 - May 2020
-**Project**: #26 of 30 in IT Career Portfolio
+Personal project, built to explore a Spark batch pipeline over factory sensor data. It is not production software — see **Status** below for exactly what is and isn't implemented.
 
-## Business Impact
+## Status
 
-- **30% Reduction in Unplanned Downtime**: Predictive maintenance models
-- **Real-time Quality Monitoring**: Automated defect detection
-- **20% Production Efficiency Gain**: Data-driven optimization
-- **Executive Dashboards**: PowerBI integration for KPI tracking
+**Implemented**
 
-## Technology Stack
+- PySpark pipeline reading sensor data and writing aggregates to InfluxDB
+- YAML pipeline configuration
 
-- **Python 3.7**: Data pipeline and ML
-- **Apache Spark 2.4**: Distributed data processing
-- **TensorFlow 2.0**: Predictive models
-- **PowerBI**: Business intelligence dashboards
-- **InfluxDB**: Time-series sensor data
+**Not implemented / known limitations**
 
-## Project Structure
+- Pipeline only — no predictive model, quality analyzer or data collector (the earlier README claimed these files; they did not exist)
+- Not wired to a real historian or MES
+- No tests
 
-```
-smart-factory/
-├── README.md
-├── requirements.txt
-├── Dockerfile
-├── docker-compose.yml
-├── src/
-│   ├── spark_pipeline.py
-│   ├── predictive_model.py
-│   ├── data_collector.py
-│   └── quality_analyzer.py
-├── config/
-│   └── pipeline.yml
-└── sql/
-    └── schema.sql
+## Built with
+
+- **Python** — pyspark, tensorflow, numpy, pandas, influxdb, PyYAML, scikit-learn
+
+## Running it
+
+```bash
+pip install -r requirements.txt
+python src/spark_pipeline.py
 ```
 
-## Contributing
+## Layout
 
-This is a historical project from April 2019 - May 2020, preserved for portfolio purposes.
+```
+config/
+  pipeline.yml
+requirements.txt
+src/
+  spark_pipeline.py
+```
 
-## License
-
-Professional portfolio project - Zambaiti
-
----
-
-**Developed during April 2019 - May 2020**
-*Part of Alexander Efrem's IT Career Portfolio (2012-2024)*
