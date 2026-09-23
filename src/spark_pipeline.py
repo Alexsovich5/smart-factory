@@ -1,6 +1,5 @@
 """
 Spark Data Pipeline
-IT Administrator - Zambaiti (2019-2020)
 
 Apache Spark pipeline for processing manufacturing sensor data,
 aggregating metrics, and feeding ML models.

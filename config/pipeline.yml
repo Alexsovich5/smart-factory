@@ -1,5 +1,4 @@
 # Smart Factory Analytics Pipeline Configuration
-# Zambaiti - 2019-2020
 
 input_path: "hdfs:///data/sensors/raw/"
 output_path: "hdfs:///data/sensors/processed/"
@@ -10,7 +9,7 @@ spark:
   executor_cores: 2
 
 influxdb:
-  host: influxdb.zambaiti.local
+  host: influxdb.example.local
   port: 8086
   database: factory_analytics
 
